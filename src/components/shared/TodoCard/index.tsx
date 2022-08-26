@@ -50,6 +50,11 @@ const Container = styled.div<styleProps>`
     transition: 0.3s;
     opacity: 0;
 
+    @media all and (max-width: 500px) {
+      background: #ff6660;
+      opacity: 100%;
+    }
+
     :hover {
       background: #ff6660;
       opacity: 100%;
