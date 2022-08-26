@@ -38,7 +38,7 @@ const todoListReducer = (state = initialState, action) => {
         )
       }
     case UPDATE_TODO_ITEM:
-      const {index, key: updateKey, newName: name, finish} = action.payload;
+      const {index, key: updateKey, finish} = action.payload;
 
       return Object.assign({}, state, {
         todoList: state.todoList.map((todo, i) => {

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { TextField } from '@mui/material';
 import { useDispatch } from "react-redux";
 import { addTodo } from "src/app/store";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { useCallback } from "react";
 
@@ -139,34 +139,38 @@ interface CreateModalProps {
 }
 
 const CreateModal = ({show, setShow}: CreateModalProps) => {
-  const defaultItems = {
-    1: {
-      name: "",
-      finish: false
-    },
-    2: {
-      name: "",
-      finish: false
-    },
-    3: {
-      name: "",
-      finish: false
-    },
-    4: {
-      name: "",
-      finish: false
-    },
-    5: {
-      name: "",
-      finish: false
-    },
-  };
+  const defaultItems = useMemo(() => {
+    return {
+      1: {
+        name: "",
+        finish: false
+      },
+      2: {
+        name: "",
+        finish: false
+      },
+      3: {
+        name: "",
+        finish: false
+      },
+      4: {
+        name: "",
+        finish: false
+      },
+      5: {
+        name: "",
+        finish: false
+      },
+    }
+  }, []);
+  
   const [title, setTitle] = useState('');
   const [items, setItems] = useState(defaultItems);
-  const reset = () => {
+
+  const reset = useCallback(() => {
     setTitle('');
     setItems(defaultItems);
-  }
+  }, [defaultItems]);
 
   const dispatch = useDispatch();
 
@@ -201,7 +205,7 @@ const CreateModal = ({show, setShow}: CreateModalProps) => {
     if (!show) {
       reset();
     }
-  }, [show]);
+  }, [show, reset]);
 
   const create = () => {
     const data = {

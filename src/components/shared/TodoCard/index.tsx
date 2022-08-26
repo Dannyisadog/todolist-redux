@@ -176,11 +176,11 @@ const TodoCard = ({index, title, items}: TodoCardProps) => {
 
   const isAllFinish = () => {
     let allFinish = true;
-    Object.keys(items).map((key) => {
-      if (items[key].name && !items[key].finish) {
+    for (const item of items) {
+      if (item.name && !item.finish) {
         allFinish = false;
       }
-    });
+    }
     return allFinish;
   }
 
