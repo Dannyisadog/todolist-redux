@@ -31,6 +31,7 @@ const Container = styled.div<styleProps>`
     background: white;
     border-radius: 8px;
     position: relative;
+    margin: 0 20px;
 
     .title-container {
       position: relative;
