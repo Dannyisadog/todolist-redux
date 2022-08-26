@@ -176,7 +176,8 @@ const TodoCard = ({index, title, items}: TodoCardProps) => {
 
   const isAllFinish = () => {
     let allFinish = true;
-    for (const item of items) {
+    for (const key in items) {
+      const item = items[key];
       if (item.name && !item.finish) {
         allFinish = false;
       }
