@@ -10,6 +10,11 @@ const Container = styled.div`
   align-items: center;
   z-index: 1;
 
+  @media all and (max-width: 500px) {
+    padding-left: 0;
+    justify-content: center;
+  }
+
   #title {
     font-size: 22px;
     color: white;
