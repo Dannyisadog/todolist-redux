@@ -25,6 +25,10 @@ const Container = styled.div<styleProps>`
   justify-content: center;
   align-items: center;
 
+  @media all and (max-width: 500px) {
+    align-items: initial;
+  }
+
   .modal {
     width: 400px;
     height: 500px;
@@ -32,6 +36,10 @@ const Container = styled.div<styleProps>`
     border-radius: 8px;
     position: relative;
     margin: 0 20px;
+
+    @media all and (max-width: 500px) {
+      margin-top: 80px;
+    }
 
     .title-container {
       position: relative;
