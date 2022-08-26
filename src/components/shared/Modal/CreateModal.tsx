@@ -215,6 +215,9 @@ const CreateModal = ({show, setShow}: CreateModalProps) => {
   }, [show]);
 
   const create = () => {
+    if (!show) {
+      return;
+    }
     const data = {
       title,
       items
