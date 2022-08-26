@@ -13,8 +13,9 @@ const Container = styled.div`
   .todo-content {
     padding: 100px 100px 80px 100px;
     display: grid;
-    grid-gap: 40px 10px;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 40px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 280px);
   }
 `;
 
