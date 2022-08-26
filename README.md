@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-###[demo](https://redux-todolist.dannyisadog.com)
+[demo](https://redux-todolist.dannyisadog.com)
 
 ## Available Scripts
 
