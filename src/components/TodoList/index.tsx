@@ -15,7 +15,7 @@ const Container = styled.div`
     display: grid;
     grid-gap: 40px;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, 280px);
+    grid-template-columns: repeat(auto-fill, 240px);
   }
 `;
 
